@@ -1,9 +1,6 @@
 From ubuntu:latest
 MAINTAINER Kato Ryuichi
 
-ENV http_proxy  http://aaa109803:19881231@150.61.8.47:10080/
-ENV https_proxy http://aaa109803:19881231@150.61.8.47:10080/
-
 # apt-get設定
 RUN apt-get  update \
  && apt-get -y install --no-install-recommends unattended-upgrades \
