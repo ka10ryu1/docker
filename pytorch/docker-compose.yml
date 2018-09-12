@@ -1,0 +1,16 @@
+# 以下を入力して実行する
+# $ docker-compose exec pytorch /bin/bash 
+
+version: '3'
+
+services:
+  pytorch:
+    restart: always
+    build: .
+    container_name: 'test'
+    command: 'tail -f /dev/null'
+    environment:
+      - TERM=xterm-256color
+      - HIST_FILE=/root/.bash_history
+    volumes:
+      - $HOME/.bash_history:/root/.bash_history 
