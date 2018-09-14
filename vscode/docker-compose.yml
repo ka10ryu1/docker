@@ -1,0 +1,23 @@
+# 以下を入力して実行する
+# $ docker-compose exec python3 /bin/bash 
+
+version: '3'
+
+services:
+  vscode:
+    restart: always
+    build: .
+    container_name: 'vscode'
+    command: 'tail -f /dev/null'
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - TERM=xterm-256color
+      - HIST_FILE=/root/.bash_history
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - $HOME/.bash_history:/root/.bash_history 
+# USBカメラを利用する場合は以下をコメントアウト解除すること
+#      - /dev/video0:/dev/video0
+#    devices:
+#      - /dev/video0:/dev/video0
