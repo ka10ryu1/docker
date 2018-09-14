@@ -10,7 +10,10 @@ services:
     container_name: 'test'
     command: 'tail -f /dev/null'
     environment:
+#      - DISPLAY=${DISPLAY}
+#      - QT_X11_NO_MITSHM=1
       - TERM=xterm-256color
       - HIST_FILE=/root/.bash_history
     volumes:
+#      - /tmp/.X11-unix:/tmp/.X11-unix
       - $HOME/.bash_history:/root/.bash_history 
