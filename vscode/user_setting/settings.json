@@ -2,4 +2,5 @@
     "editor.fontFamily": "Cica-Bold",
     "editor.fontSize": 18,
     "editor.lineHeight": 17,
+    "terminal.integrated.shell.linux": "/bin/bash",
 }
