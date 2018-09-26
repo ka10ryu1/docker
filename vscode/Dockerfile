@@ -2,8 +2,8 @@ From ubuntu:latest
 MAINTAINER Kato Ryuichi
 
 # proxy設定
-#ENV http_proxy  http://[ID]:[pass]@150.61.8.47:10080/
-#ENV https_proxy http://[ID]:[pass]@150.61.8.47:10080/
+ENV http_proxy  http://[ID]:[pass]@150.61.8.47:10080/
+ENV https_proxy http://[ID]:[pass]@150.61.8.47:10080/
 
 RUN set -x \
 # apt-get設定
@@ -45,7 +45,7 @@ libnotify4 libnss3 gnupg libgconf-2-4 libsecret-1-0 libxss1 libasound2 libgtk-3-
  && hash -r pip3 \
 # 必要なライブラリをインストール
 # && pip3 install chainer opencv-python matplotlib \
- && pip3 install pylint
+ && pip3 install pylint autopep8
 
 #使用言語を日本語に設定
 ENV LANG ja_JP.UTF-8

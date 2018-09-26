@@ -3,4 +3,8 @@
     "editor.fontSize": 18,
     "editor.lineHeight": 17,
     "terminal.integrated.shell.linux": "/bin/bash",
+    "[python]": {
+        "editor.formatOnSave": true
+    },
+    "terminal.integrated.rendererType": "dom",
 }
