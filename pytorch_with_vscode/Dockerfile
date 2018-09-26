@@ -2,8 +2,8 @@ From ubuntu:latest
 MAINTAINER Kato Ryuichi
 
 # proxy設定
-ENV http_proxy  http://aaa109803:19881231@150.61.8.47:10080/
-ENV https_proxy http://aaa109803:19881231@150.61.8.47:10080/
+ENV http_proxy  http://[ID]:[PASS]@150.61.8.47:10080/
+ENV https_proxy  http://[ID]:[PASS]@150.61.8.47:10080/
 
 RUN set -x \
 # apt-get設定
